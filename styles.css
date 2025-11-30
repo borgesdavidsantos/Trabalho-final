@@ -1,0 +1,68 @@
+/* NexxShop — Estético Futurista */
+:root{
+  --bg:#07070b;
+  --panel:#0f1116;
+  --muted:#9aa3b2;
+  --accent1:#8A2BE2;
+  --accent2:#00C3FF;
+  --glass: rgba(255,255,255,0.03);
+  --glass-2: rgba(255,255,255,0.02);
+  --radius:14px;
+  --font: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:var(--font);background:linear-gradient(180deg,#03030a 0%, #071023 60%);color:#e6eef8;min-height:100vh;}
+
+/* Topbar */
+.topbar{display:flex;align-items:center;justify-content:space-between;padding:14px 28px;background:linear-gradient(90deg, rgba(138,43,226,0.12), rgba(0,195,255,0.06));backdrop-filter: blur(6px);position:sticky;top:0;z-index:10}
+.brand{display:flex;align-items:center;gap:12px}
+.logo{width:56px;height:56px}
+.brand-main{font-weight:700;font-size:20px;letter-spacing:0.3px}
+.brand .accent{color:var(--accent2)}
+.tagline{display:block;font-size:12px;color:var(--muted);margin-top:2px}
+
+/* Nav */
+.nav a{color:var(--muted);text-decoration:none;margin-left:16px;padding:8px 10px;border-radius:8px;transition:all .18s}
+.nav a.active, .nav a:hover{color:#fff;background:linear-gradient(90deg,var(--accent1),var(--accent2));box-shadow:0 6px 18px rgba(0,195,255,0.08);transform:translateY(-2px)}
+
+/* Layout */
+.container{max-width:1100px;margin:28px auto;padding:0 20px}
+.hero{display:flex;gap:28px;align-items:center}
+.hero-left{flex:1}
+.hero-right{flex:1;display:flex;justify-content:center}
+.lead{color:var(--muted);font-size:16px;line-height:1.5}
+.accent{background:linear-gradient(90deg,var(--accent1),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:700}
+.cta-row{margin-top:18px;display:flex;gap:12px}
+.btn{padding:12px 18px;border-radius:10px;border:none;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:10px;font-weight:600}
+.btn.primary{background:linear-gradient(90deg,var(--accent1),var(--accent2));color:#04101a;box-shadow:0 8px 30px rgba(138,43,226,0.18)}
+.btn.ghost{background:transparent;color:var(--muted);border:1px solid rgba(255,255,255,0.04)}
+
+/* Panels and forms */
+.grid-wrap{display:grid;grid-template-columns:360px 1fr;gap:20px}
+.panel{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:var(--radius);box-shadow:0 6px 30px rgba(2,6,23,0.6)}
+.form input{display:block;width:100%;padding:10px;margin:8px 0;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#e6eef8}
+
+/* Cards grid */
+.cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px;margin-top:10px}
+.card{background:linear-gradient(180deg,var(--panel), rgba(255,255,255,0.02));padding:12px;border-radius:12px;position:relative;overflow:hidden;transition:transform .18s,box-shadow .18s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(0,0,0,0.6)}
+.thumb img{width:100%;height:140px;object-fit:cover;border-radius:8px}
+.user-card .thumb img{height:120px;object-fit:cover}
+.card .meta{margin-top:10px}
+.card h4{margin:0 0 6px 0}
+.muted{color:var(--muted);font-size:13px}
+.desc{font-size:13px;color:var(--muted);margin-top:8px}
+
+/* remove button */
+.remove{position:absolute;top:10px;right:10px;background:transparent;border:none;color:var(--muted);font-size:14px;padding:6px;border-radius:8px;cursor:pointer;transition:all .12s}
+.remove:hover{color:#fff;transform:scale(1.05)}
+
+/* removing animation */
+.removing{opacity:0;transform:scale(.98);transition:all .22s}
+
+/* responsive */
+@media (max-width:880px){
+  .grid-wrap{grid-template-columns:1fr; padding-bottom:30px}
+  .hero{flex-direction:column;align-items:flex-start}
+  .cards-grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+}

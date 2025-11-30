@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NexxShop — Produtos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="theme-futuristic">
+  <header class="topbar">
+    <div class="brand">
+      <img src="../assets/img/logo.svg" alt="NexxShop logo" class="logo">
+      <div class="brand-text">
+        <span class="brand-main">Nexx<span class="accent">Shop</span></span>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="../index.html">Início</a>
+      <a href="../users/users.html">Usuários</a>
+      <a href="products.html" class="active">Produtos</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">Produtos</h2>
+    <section class="grid-wrap">
+      <div class="panel">
+        <h3>Adicionar Produto</h3>
+        <form id="product-form" class="form">
+          <input type="text" id="title" placeholder="Título" required>
+          <input type="text" id="description" placeholder="Descrição" required>
+          <input type="number" id="price" placeholder="Preço" required>
+          <input type="text" id="brand" placeholder="Marca" required>
+          <input type="text" id="category" placeholder="Categoria" required>
+          <input type="url" id="thumbnail" placeholder="Foto (URL)">
+          <button type="submit" class="btn primary">Adicionar</button>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h3>Lista de Produtos</h3>
+        <div id="products-list" class="cards-grid"></div>
+      </div>
+    </section>
+  </main>
+
+<script src="products.js"></script>
+</body>
+</html>

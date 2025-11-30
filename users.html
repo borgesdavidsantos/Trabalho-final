@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NexxShop — Usuários</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="theme-futuristic">
+  <header class="topbar">
+    <div class="brand">
+      <img src="../assets/img/logo.svg" alt="NexxShop logo" class="logo">
+      <div class="brand-text">
+        <span class="brand-main">Nexx<span class="accent">Shop</span></span>
+      </div>
+    </div>
+    <nav class="nav">
+      <a href="../index.html">Início</a>
+      <a href="users.html" class="active">Usuários</a>
+      <a href="../products/products.html">Produtos</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 class="page-title">Usuários</h2>
+    <section class="grid-wrap">
+      <div class="panel">
+        <h3>Adicionar Usuário</h3>
+        <form id="user-form" class="form">
+          <input type="text" id="firstName" placeholder="Nome" required>
+          <input type="text" id="lastName" placeholder="Sobrenome" required>
+          <input type="email" id="email" placeholder="Email" required>
+          <input type="number" id="age" placeholder="Idade" required>
+          <input type="url" id="image" placeholder="Foto (URL)">
+          <button type="submit" class="btn primary">Adicionar</button>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h3>Lista de Usuários</h3>
+        <div id="users-list" class="cards-grid"></div>
+      </div>
+    </section>
+  </main>
+
+<script src="users.js"></script>
+</body>
+</html>
