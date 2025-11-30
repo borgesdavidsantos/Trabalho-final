@@ -1,0 +1,1 @@
+console.log('NexxShop carregado — Estética Futurista');
